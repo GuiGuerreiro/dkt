@@ -7,6 +7,6 @@ The objective of the project was to implement a dynamic server ring, making use 
 The server ring is be able to accept new incoming servers that wish to join, be able to deal with expected and unexpected server leaves and crashes and is also able to search the ring for a certain key location.
 Not much security and input validation was implemented given it was not a project requirement.
 
-Project pair: htts://github.com/Sargazzo
+Project pair: https://github.com/Sargazzo
 
 Grade: /20
