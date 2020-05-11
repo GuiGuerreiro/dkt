@@ -1,19 +1,10 @@
 #ifndef STRUCTS_N_MAIN_H_INCLUDED
 #define STRUCTS_N_MAIN_H_INCLUDED
 
-//#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
-#include <unistd.h>
-#include <sys/time.h>
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
-#include <netdb.h>
 #include <stdbool.h>
-#include <signal.h>
 #include <stdio.h>
 
 #define IP_SIZE 20
@@ -23,6 +14,7 @@
 #define MSG_SIZE 50
 #define max(A,B) ((A)>=(B)?(A):(B))
 
+//Single Server info struct
 typedef struct
 {
   //User chosen port
@@ -31,6 +23,7 @@ typedef struct
   char IP[IP_SIZE];
 }server_info;
 
+//File descriptors struct
 typedef struct ringfd
 {
   //Fd relative to the predecessor TCP
@@ -41,10 +34,10 @@ typedef struct ringfd
   int udp;
   //Fd listening for TCP
   int listen;
-  //Fd
+  //temporary fd for the accepting calls
   int temp;
 }ringfd;
-
+//Server and its actual connections struct
 typedef struct
 {
   //My ID
@@ -55,9 +48,9 @@ typedef struct
   server_info SecondNext_info;
   //Server number
   int key;
-  //Next Server key
+  //successor key
   int succ_key;
-
+  //2º successor key
   int second_succ_key;
   //Flag that indicates if we are in the ring
   bool inRing;
