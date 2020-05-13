@@ -7,15 +7,12 @@ After being created, the ring is assumed as an Hash table where its keys are
 distributed following the concept: "The most closer node after the key is saving it".
 The client can find where all the keys are being saved.
 
-It was a really challenging work where we had to recode over and over again
-because we never had contact with "Socket programming before RCI, but after all
-here we are!
 
-All we can say now is: Enjoy your connections!
+All we can say now is: Enjoy your connections! :D
 
 Authors:
-Guilherme Guerreiro 87010
-João Marques 90114
+Guilherme Guerreiro
+João Marques
 
 IST students
 
